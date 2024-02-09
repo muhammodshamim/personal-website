@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "custom-font";
+  src: url("./assets/font/josefin.ttf");
+}
+@font-face {
+  font-family: "logo-font";
+  src: url("./assets/font/borel.ttf");
+}
+* {
+  font-family: "custom-font";
+}
+/* css variable  */
+:root {
+  --primary: #161616;
+  --secondary: #232323;
+  --white: #fff;
+  --primary-color: #0072f5;
+}
+
+/* reused code  */
+body {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.logo {
+  font-family: "logo-font";
+  font-weight: bold;
+  font-size: 20px;
+}
+.logo span {
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+}
+.primary-bg {
+  background-color: var(--primary-color);
+}
+.primary-color {
+  color: var(--primary-color);
+}
+.secondary-bg {
+  background-color: var(--secondary);
+}
+.secondary-text {
+  background-color: var(--secondary);
+}
+.container {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+}
+.btn {
+  position: relative;
+  border: 1px solid var(--primary-color);
+  padding: 8px 25px;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  top: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+}
+.btn:hover::before {
+  top: 0;
+}
+.glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Adjust blur amount as needed */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.home {
+  position: relative;
+}
+.section {
+  min-height: 100vh;
+  padding: 50px 0;
+}
+.contact-section input,
+.contact-section textarea {
+  border: 1px solid var(--secondary);
+}
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border: 1px solid var(--primary-color) !important;
+}
+.nav a.active {
+  background: var(--primary-color);
+  padding: 5px;
+}
+.focus-border:focus {
+  border: 1px solid var(--primary-color);
+}
+.focus-border {
+  border: 1px solid var(--secondary);
+}
+.custom-border {
+  border: 1px solid var(--primary-color);
+}
+select {
+  background: var(--secondary);
+}
+footer {
+  background-color: var(--secondary);
+}
+/* reused code end  */
